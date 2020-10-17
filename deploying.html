@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CovidSusTracker Documentation</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</head>
+
+<body class="body-blue">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">CovidSusTracker</span><span class="text-bold">Docs</span>
+                        </a>
+                    </h1>
+                </div>
+                <!--//branding-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Deploying Application</li>
+                </ol>
+                <div class="top-search-box">
+                    <form class="form-inline search-form justify-content-center" action="" method="get">
+
+                        <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+
+                        <button type="submit" class="btn search-btn" value="Search"><i
+                                class="fas fa-search"></i></button>
+
+                    </form>
+                </div>
+            </div>
+            <!--//container-->
+        </header>
+        <!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon fas fa-rocket"></span> Deploying
+                        Application</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: Oct 12th, 2020</div>
+                </div>
+                <!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="introduction" class="doc-section">
+                                <h2 class="section-title">Introduction</h2>
+                                <div class="section-block">
+                                    <h3 class="block-title">1. Why Deploy?</h3>
+                                    <p>I wanted to deploy this project so that I could add it to my portfolio and allow
+                                        users to actually use the app. Additionally, since I am doing this for my
+                                        internship, I wanted to allow my teachers to actually use the app while im
+                                        presenting it to them.</p>
+                                    <!-- <p>The screenshots used in this page are taken from <a href="https://themes.3rdwavemedia.com/bootstrap-templates/product/appify-bootstrap-4-admin-template-for-app-developers/" target="_blank">Appify</a>. Appify is a Bootstrap 4 admin template made for app developers.</p>
+                                    <div class="screenshot-holder">
+                                        <a href="https://themes.3rdwavemedia.com/bootstrap-templates/product/appify-bootstrap-4-admin-template-for-app-developers/" target="_blank"><img class="img-fluid" src="assets/images/demo/appify-chart-chartjs.jpg" alt="screenshot" /></a>
+                                        <a class="mask" href="https://themes.3rdwavemedia.com/bootstrap-templates/product/appify-bootstrap-4-admin-template-for-app-developers/" target="_blank"><i class="icon fa fa-link"></i></a>
+                                    </div>  -->
+                                </div>
+                                <!--//section-block-->
+                                <div class="section-block">
+                                    <h3 class="block-title">2. Contributers</h3>
+                                    <p>I just want to thank Kheng Yew (Mentor) for recommending me the tools that is
+                                        used for this project and Marcus (Mentor) for helping me to solve the issues I
+                                        faced!</p>
+                                    <!-- <p><strong><i class="fas fa-external-link-square-alt"></i> Source:</strong> <a href="https://www.chartjs.org/docs/" target="_blank">https://www.chartjs.org/docs/</a></p> -->
+                                </div>
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+
+                            <section id="push-db-to-heroku" class="doc-section">
+                                <h2 class="section-title">Pushing your postgres DB to Heroku</h2>
+                                <div class="section-block">
+                                    <h3 class="block-title">1. Pre-requisites</h3>
+                                    <p>
+                                        <i class="far fa-check-circle"></i><a
+                                            href="https://www.postgresql.org/download/" target="_blank"> Postgress</a>
+                                        must be installed on your local machine.
+                                    </p>
+                                    <p>
+                                        <i class="far fa-check-circle"></i> You must have a Postgres DB Setup
+                                    </p>
+                                </div>
+                                <!--//section-block-->
+                                <div class="section-block">
+                                    <h3 class="block-title">2. Set Up</h3>
+                                    <p><strong><i class="fas fa-external-link-square-alt"></i> Heroku Wesbite:</strong>
+                                        <a href="https://www.heroku.com/" target="_blank">https://www.heroku.com/</a>
+                                    </p>
+
+                                    <h6>2.1. Go to the directory on your machine where you want to dump your file:</h6>
+                                    <p>
+                                    <pre><code class="language-markup">$ cd path/to/dir/you/want</code></pre>
+                                    </p>
+
+                                    <h6>2.2. Dump your local Postgres DB into a sql file:</h6>
+                                    <pre><code class="language-markup">$ pg_dump -U &ltDB_USER&gt &ltDB_NAME&gt &gt mydb.sql</code></pre>
+                                    </p>
+                                    <p><mark>*normally <code class="language-markup">&ltDB_USER&gt</code> will be
+                                            postgres</mark></p>
+
+                                    <h6>2.3. Create an app in Heroku:</h6>
+                                    <p>
+                                    <pre><code class="language-javascript">$ heroku create &ltYOUR_UNIQUE_APP_NAME&gt</code></pre>
+                                    </p>
+
+                                    <h6>2.4. Creating a new add-on for postgres</h6>
+                                    <p>After creating your application, you will need to go to the heroku website. After
+                                        logging in, you will see that there are a list of applications that you created.
+                                        Click on the one that you just created. Once clicked, go to the resouces tab as
+                                        shown below:</p>
+                                    <img class="img-fluid" src="https://i.imgur.com/Ny7S4Ak.png" alt="screenshot" />
+
+                                    </br>
+                                    </br>
+                                    <p>After that, go click on <b>"Find more add-ons"</b> as shown:</p>
+                                    <img class="img-fluid" src="https://i.imgur.com/pymotqY.png" alt="screenshot" />
+
+                                    </br>
+                                    </br>
+                                    <p>Next, search for <b>Heroku Postgres</b> in the add-ons page under the data stores
+                                        and
+                                        click on it as shown:</p>
+                                    <img class="img-fluid" src="https://i.imgur.com/0ge41rn.png" alt="screenshot" />
+
+                                    </br>
+                                    </br>
+                                    <p>Click on <b>"Install Heroku Postgres"</b></p>
+                                    <img class="img-fluid" src="https://i.imgur.com/NwDh4AD.png" alt="screenshot" />
+
+                                    </br>
+                                    </br>
+                                    <p>Ensure that the plan is <b>Hobby Dev - Free</b> and enter the name of the app you
+                                        just
+                                        created in the search box "App to provision to"</p>
+                                    <img class="img-fluid" src="https://i.imgur.com/VomaoPP.png" alt="screenshot" />
+                                    </br>
+                                    </br>
+                                    <h6>2.5. Pushing the sql script to Heroku:</h6>
+                                    <p>
+                                    <pre><code class="language-markup">$ heroku pg:psql --app &ltYOUR_UNIQUE_APP_NAME&gt &lt mydb.sql</code></pre>
+                                    </p>
+                                </div>
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+
+                            <section id="push-backend-to-heroku" class="doc-section">
+                                <h2 class="section-title">Pushing your backend (JAVA API) to Heroku</h2>
+                                <div class="section-block">
+                                    <h3 class="block-title">1. Pre-requisites</h3>
+                                    <p>
+                                        <i class="far fa-check-circle"></i> A Heroku Postgres DB must have already been
+                                        setup.
+                                    </p>
+                                    <p>
+                                        <i class="far fa-check-circle"></i> You need to have your Java backend ready.
+                                    </p>
+                                </div>
+                                <!--//section-block-->
+                                <div class="section-block">
+                                    <h3 class="block-title">2. Set Up</h3>
+                                    <p><strong><i class="fas fa-external-link-square-alt"></i> Heroku Wesbite:</strong>
+                                        <a href="https://www.heroku.com/" target="_blank">https://www.heroku.com/</a>
+                                    </p>
+
+                                    <h6>2.1. Setting up your Java Backend:</h6>
+                                    <p>The first that thing you need to do is downgrade your project from a java version
+                                        of 11 to 8. This is needed because when you try deploying your application in
+                                        java 11, there will be an error of
+                                        <code>Fatal error compiling: invalid target release: 11</code></p>
+                                    <p>The change is done in the <b>pom.xml</b> file via the following code:</p>
+                                    <p>
+                                    <pre><code class="language-xml">
+<i>// Change From This</i>
+&ltproperties&gt
+    &ltjava.version&gt<mark>11</mark>&lt/java.version&gt
+&lt/properties&gt
+
+<i>// To This</i>
+&ltproperties&gt
+    &ltjava.version&gt<mark>8</mark>&lt/java.version&gt
+&lt/properties&gt
+                                    </code></pre>
+                                    </p>
+                                    <p><mark>*If you have coded your backend in java 11, when you switch the java version 8, you might get an error of: <code>class var cannot be found</code>. You might get this because in java version 8, there is no "var".</mark></p>
+                                    <p>Thus, you will need to change it to <code class="language-java">&ltResult Type&gt &ltVariable Name&gt = ...</code></p>
+                                    <p>The next thing that you will need to take note of is that you might have a file called <code>application.properties</code> that might have the following lines:</p>
+                                    <p>
+                                        <pre><code class="lang-properties">
+spring.datasource.url=jdbc:postgresql://ec2-34-195-115-225.compute-1.amazonaws.com:5432/d68kbbj3j9f7le?......
+spring.datasource.username=&ltPostgres Username&gt
+spring.datasource.password=&ltPostgres Password&gt
+spring.datasource.driver-class-name=org.postgresql.Driver
+                                        </code></pre>
+                                    </p>
+                                    <p><strong><i class="fas fa-external-link-square-alt"></i> Heroku Documentation:</strong>
+                                        <a href="https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java#using-the-jdbc_database_url" target="_blank">https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java#using-the-jdbc_database_url</a>
+                                    </p>
+                                    <p>You do not need to change the <code>datasource.url</code>, <code>datasource.username</code> and <code>datasource.password</code> as when you upload the API to heroku, it will be automatically be reconfigured. However, you may wish to keep the text in the file as those strings are required if you want to connect your API to your local DB.</p>
+
+                                    <h6>2.2. Go to the directory on your machine where your API files are located at:</h6>
+                                    <p>
+                                    <pre><code class="language-markup">$ cd path/to/dir/of/files</code></pre>
+                                    </p>
+
+                                    <h6>2.3. Creating a local Git Repository:</h6>
+                                    <p>Execute the following commands from the root directory of the project to create a local Git repository for the project</p>
+                                    <p>
+                                    <pre><code class="language-javascript">$ git init
+$ git add .
+$ git commit -m "initial commit"</code></pre>
+                                    </p>
+
+                                    <h6>2.4. Change the Heroku git path:</h6>
+                                    <p>Change the git path to the app that you created in the first part of this tutorial via the following command:</p>
+                                    <pre><code class="language-javascript">$ heroku git:remote -a &ltApp_Name&gt</code></pre>
+                                    </p>
+                                    
+                                    <h6>2.5. Push API files to heroku:</h6>
+                                    <p>Use the following command to push the API files to the Heroku git:</p>
+                                    <p>
+                                    <pre><code class="language-markup">$ git push heroku master</code></pre>
+                                    </p>
+                                    <p><mark>*When deploying an app using Heroku, Heroku will only build Master & Main branches only. Any other branches will only be stored but never built.</mark></p>
+
+                                    <h6>2.6. Opening / Running the app:</h6>
+                                    <p>Use the following commands to open the heroku application and test the api:</p>
+                                    <p>
+                                    <pre><code class="language-javascript"><i>// Run the Heroku app</i>
+$ heroku open
+<i>// Test the app</i>
+&ltLink_Generated&gt / &ltPath_Name&gt</code></pre>
+                                    </p>
+                                </div>
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+                        </div>
+                        <!--//content-inner-->
+                    </div>
+                    <!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <a class="nav-link scrollto" href="#introduction">Introduction</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#step1">1. Why Deploy?</a>
+                                    <a class="nav-link scrollto" href="#step2">2. Contributers</a>
+                                </nav>
+                                <a class="nav-link scrollto" href="#push-db-to-heroku">Pushing your postgres DB to
+                                    Heroku</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#step1">1. Pre-requisites</a>
+                                    <a class="nav-link scrollto" href="#step2">2. Set Up</a>
+                                </nav>
+                                <!--//nav-->
+                                <a class="nav-link scrollto" href="#push-backend-to-heroku">Pushing your backend (JAVA
+                                    API) to Heroku</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#step1">1. Pre-requisites</a>
+                                    <a class="nav-link scrollto" href="#step2">2. Set Up</a>
+                                </nav>
+                            </nav>
+                            <!--//doc-menu-->
+                        </div>
+                    </div>
+                    <!--//doc-sidebar-->
+                </div>
+                <!--//doc-body-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//doc-wrapper-->
+
+        
+
+    </div>
+    <!--//page-wrapper-->
+
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a
+                    href="https://github.com/aquaimpact" target="_blank">Ong Wei En</a> for future developers</small>
+
+        </div>
+        <!--//container-->
+    </footer>
+    <!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+
+</html>
