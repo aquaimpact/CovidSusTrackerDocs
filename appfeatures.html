@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CovidSusTracker Documentation</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">CovidSusTracker</span><span class="text-bold">Docs</span>
+                        </a>
+                    </h1>
+
+                </div>
+                <!--//branding-->
+
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Application Features</li>
+                </ol>
+
+                <div class="top-search-box">
+                    <form class="form-inline search-form justify-content-center" action="" method="get">
+
+                        <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+
+                        <button type="submit" class="btn search-btn" value="Search"><i
+                                class="fas fa-search"></i></button>
+
+                    </form>
+                </div>
+
+            </div>
+            <!--//container-->
+        </header>
+        <!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Application Features</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: Oct 12th, 2020</div>
+                </div>
+                <!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="download-section" class="doc-section">
+                                <h2 class="section-title">What is this tool?</h2>
+                                <div class="section-block">
+                                    <ul>
+                                        <li>This is a tool that allows you to add CSV files and compare them against the
+                                            database to find out who were the people that might have gotten into contact
+                                            with this person.</li>
+                                        <li>This tool focuses on comparing 3 main groups of people with the suspects.
+                                            They are the Confirmed Cases (CC), Close Contacts (Close) and People At The
+                                            Public (PTAP).</li>
+                                        <li>This is a one time use tool. This means that once you exit the page, the
+                                            data will be cleared.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <!--//doc-section-->
+
+                            <section id="installation-section" class="doc-section">
+                                <h2 class="section-title">Languages and Tools Used</h2>
+                                </br>
+
+                                <div class="callout-block callout-success"
+                                    style="margin-right: 10px; display:inline-block;background-color: white; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); text-align: center;">
+                                    <img height="50"
+                                        src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
+                                        alt="ReactJs">
+                                    <h4 class="callout-title" style="padding-top: 20px;">ReactJs</h4>
+                                </div>
+
+                                <div class="callout-block callout-success"
+                                    style="margin-right: 10px; display:inline-block;background-color: white; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); text-align: center;">
+                                    <img height="50"
+                                        src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png"
+                                        alt="ReactJs">
+                                    <h4 class="callout-title" style="padding-top: 20px;">Postgres</h4>
+                                </div>
+
+                                <div class="callout-block callout-success"
+                                    style="margin-right: 10px; display:inline-block;background-color: white; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); text-align: center;">
+                                    <img height="50" src="https://miro.medium.com/max/8642/1*iIXOmGDzrtTJmdwbn7cGMw.png"
+                                        alt="ReactJs">
+                                    <h4 class="callout-title" style="padding-top: 20px;">Java</h4>
+                                </div>
+
+                                <div class="callout-block callout-success"
+                                    style="margin-right: 10px; display:inline-block;background-color: white; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); text-align: center;">
+                                    <img height="50"
+                                        src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/spring-boot/spring-boot.png"
+                                        alt="Spring Boot">
+                                    <h4 class="callout-title" style="padding-top: 20px;">Spring Boot</h4>
+                                </div>
+
+                                <div class="callout-block callout-success"
+                                    style="margin-right: 10px; display:inline-block;background-color: white; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); text-align: center;">
+                                    <img height="50"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Tomcat-logo.svg/1200px-Tomcat-logo.svg.png"
+                                        alt="Apache Tomcat">
+                                    <h4 class="callout-title" style="padding-top: 20px;">Apache Tomcat</h4>
+                                </div>
+
+                                <div class="callout-block callout-success"
+                                    style="margin-right: 10px; display:inline-block;background-color: white; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); text-align: center;">
+                                    <img height="50"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
+                                        alt="CSS">
+                                    <h4 class="callout-title" style="padding-top: 20px;">CSS</h4>
+                                </div>
+
+                                <div class="callout-block callout-success"
+                                    style="display:inline-block;background-color: white; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); text-align: center;">
+                                    <img height="50"
+                                        src="https://www.nicepng.com/png/detail/223-2233246_heroku-logo-salesforce-heroku.png"
+                                        alt="Heroku">
+                                    <h4 class="callout-title" style="padding-top: 20px;">Heroku</h4>
+                                </div>
+                            </section>
+                            <!--//doc-section-->
+
+                            <section id="code-section" class="doc-section">
+                                <h2 class="section-title">Features</h2>
+                                <div class="section-block">
+                                    <ul>
+                                        <li>CSV importing</li>
+                                        <li>Easy to use map to show the path of the suspects (can be filtered for easier
+                                            viewing)</li>
+                                        <li>On intersection of paths, it is easy to check if the suspects have come into
+                                            contact with each other using the gantt chart</li>
+                                        <li>Sections will only appear if there are items for users to use. (For example,
+                                            if there is no data is shown in the table section, no visuals will appear)
+                                        </li>
+                                        <li>Streamlining the public is also possible with the manual importing of the
+                                            public at the place to the close contacts. You might need this because when
+                                            the app is acutally deployed, the number of people at the public might
+                                            become huge. Thus, to get specific people you can easily import them into
+                                            the close contacts section</li>
+                                        <li>Easy visualisation of person's routes in the profile page</li>
+                                        <li>Allows user to go in depth (+ 1 layer) to view intersection of person (CC,
+                                            Close, PTAP) with other people</li>
+                                    </ul>
+
+                                </div>
+                                <!--//section-block-->
+                            </section>
+                            <!--//doc-section-->
+                            <section id="tables-section" class="doc-section">
+                                <h2 class="section-title">Screens In this app</h2>
+                                <div class="section-block">
+                                    <p>This section will contain the screenshots of the website i have created
+                                    </p>
+                                </div>
+
+                                <!-- <div class="callout-block callout-info">
+                                    <div class="icon-holder">
+                                        <i class="fas fa-bullhorn"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="callout-title">Lightbox Example</h4>
+                                        <p>Click the screenshot images to trigger the image modal.</p>
+                                    </div>
+                                </div> -->
+
+                                <div class="section-block">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12 col-sm-12">
+                                            <h6>CSV Importing</h6>
+                                            <div class="screenshot-holder">
+                                                <a href="https://i.imgur.com/JAWOYiX.png" data-title="CSV Importing" data-toggle="lightbox"><img
+                                                        class="img-fluid" src="https://i.imgur.com/JAWOYiX.png" alt="screenshot" /></a>
+                                                <a class="mask" href="https://i.imgur.com/JAWOYiX.png" data-title="CSV Importing"
+                                                    data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12 col-sm-12">
+                                            <h6>Suspect Paths Map</h6>
+                                            <p>Used to see the path that the suspect took</p>
+                                            <div class="screenshot-holder">
+                                                <a href="https://i.imgur.com/pjd2GVE.png" data-title="Suspect Paths Map" data-toggle="lightbox"><img
+                                                        class="img-fluid" src="https://i.imgur.com/pjd2GVE.png" alt="screenshot" /></a>
+                                                <a class="mask" href="https://i.imgur.com/pjd2GVE.png" data-title="Suspect Paths Map"
+                                                    data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="col-md-6 col-sm-12 col-sm-12">
+                                            <h6>Suspect Gantt Chart</h6>
+                                            <p>Useful to check if the 2 suspects overlapped</p>
+                                            <div class="screenshot-holder">
+                                                <a href="https://i.imgur.com/PfYqgyz.png" data-title="Suspect Gantt Chart" data-toggle="lightbox"><img
+                                                        class="img-fluid" src="https://i.imgur.com/PfYqgyz.png" alt="screenshot" /></a>
+                                                <a class="mask" href="https://i.imgur.com/PfYqgyz.png" data-title="Suspect Gantt Chart"
+                                                    data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6 col-sm-12 col-sm-12">
+                                            <h6>List of people (tabular form) at the place where the suspect was</h6>
+                                            <p>Useful to check if any Confirmed cases came into contact with the
+                                                person. It is also useful if the user wants to check who in the public
+                                                were there</p>
+                                            <div class="screenshot-holder">
+                                                <a href="https://i.imgur.com/Qu2eFui.png"
+                                                    data-title="List of people (tabular form) at the place where the suspect was" data-toggle="lightbox"><img
+                                                        class="img-fluid"
+                                                        src="https://i.imgur.com/Qu2eFui.png"
+                                                        alt="screenshot" /></a>
+                                                <a class="mask" href="https://i.imgur.com/Qu2eFui.png"
+                                                    data-title="List of people (tabular form) at the place where the suspect was" data-toggle="lightbox"><i
+                                                        class="icon fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--//row-->
+                                </div>
+                                <!--//section-block-->
+
+                                <div class="section-block">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12 col-sm-12">
+                                            <h6>Transfering People from the public to close contacts</h6>
+                                            <p>Useful for focusing on specific people at the public</p>
+                                            <div class="screenshot-holder">
+                                                <a href="https://i.imgur.com/maaU1Rx.png" data-title="Transfering People from the public to close contacts" data-toggle="lightbox"><img
+                                                        class="img-fluid" src="https://i.imgur.com/maaU1Rx.png" alt="screenshot" /></a>
+                                                <a class="mask" href="https://i.imgur.com/maaU1Rx.png" data-title="Transfering People from the public to close contacts"
+                                                    data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12 col-sm-12">
+                                            <h6>Profile Page / Report</h6>
+                                            <p>Popout out when the user clicks on a a row in the table</p>
+                                            <div class="screenshot-holder">
+                                                <a href="https://i.imgur.com/zTBc5tz.png" data-title="Profile Page / Report" data-toggle="lightbox"><img
+                                                        class="img-fluid" src="https://i.imgur.com/zTBc5tz.png" alt="screenshot" /></a>
+                                                <a class="mask" href="https://i.imgur.com/zTBc5tz.png" data-title="Profile Page / Report"
+                                                    data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--//row-->
+                                </div>
+                                <!--//section-block-->
+
+                                
+                            </section>
+                            <!--//doc-section-->
+                            <section id="buttons-section" class="doc-section">
+                                <h2 class="section-title">Credits</h2>
+                                <div class="section-block">
+                                    <p>This project was done during my Polytechnic internship at CSIT</p>
+                                    <p>Much thanks to Kheng Yew and Marcus for helping to make this internship possible! They have helped me in many ways such as:
+                                    </p>
+                                    <ol>
+                                        <li>Increasing my tech stack. With Kheng Yew's recommendations, I learnt how to use Mapbox GL (make maps), Heroku (Deploying Applications)</li>
+                                        <li>Helping me solve some errors which seemed impossible. Marcus helped me alot for this part as he was able to quickly find the cause of the problem and the solution for it.</li>
+                                    </ol>
+                                </div>
+                                <!--//section-block-->
+
+                                <h4>Companies Involved</h4>
+                                <a href="https://www.tp.edu.sg/" target="_blank"><div class="callout-block callout-success"
+                                    style="margin-right: 10px; display:inline-block;background-color: white; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); text-align: center;">
+                                    <img height="100"
+                                        src="https://www.tp.edu.sg/content/dam/tp-web/images/common/tplogo-course-search.png"
+                                        alt="TP">
+                                    <h4 class="callout-title" style="padding-top: 20px;">Temasek Polytechnic</h4>
+                                </div></a>
+
+                                <a href="https://www.csit.gov.sg/" target="_blank"><div class="callout-block callout-success"
+                                    style="margin-right: 10px; display:inline-block;background-color: white; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); text-align: center;">
+                                    <img height="100"
+                                        src="https://www.csit.gov.sg/images/default-source/csit-logo-and-icon/csit-logo.png?sfvrsn=c3f7e4f3_4"
+                                        alt="CSIT">
+                                    <h4 class="callout-title" style="padding-top: 20px;">CSIT</h4>
+                                </div></a>
+                            </section>
+                            <!--//doc-section-->
+                        </div>
+                        <!--//content-inner-->
+                    </div>
+                    <!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <a class="nav-link scrollto" href="#download-section">What is this tool?</a>
+                                <a class="nav-link scrollto" href="#installation-section">Languages and Tools Used</a>
+                                <a class="nav-link scrollto" href="#code-section">Fatures</a>
+                                <a class="nav-link scrollto" href="#tables-section">Screens in this app</a>
+                                <a class="nav-link scrollto" href="#buttons-section">Credits</a>
+                            </nav>
+                            <!--//doc-menu-->
+                        </div>
+                    </div>
+                    <!--//doc-sidebar-->
+                </div>
+                <!--//doc-body-->
+            </div>
+            <!--//container-->
+        </div>
+        <!--//doc-wrapper-->
+
+    </div>
+    <!--//page-wrapper-->
+
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a
+                    href="https://github.com/aquaimpact" target="_blank">Ong Wei En</a> for future developers</small>
+
+        </div>
+        <!--//container-->
+    </footer>
+    <!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+
+</html>
