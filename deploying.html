@@ -26,6 +26,45 @@
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 
+    <script>
+        
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let repos = JSON.parse(this.responseText);
+            repos.filter(x => x.name == "CovidSusTrackerDocs").forEach((repo)=>{
+                var dates = new Date(repo.updated_at)
+                var name = repo.name
+                // Oct 12th, 2020 
+                var newDate = 'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'.split(',')[dates.getMonth()];
+                var date = ""
+
+                if(dates.getDate() == 1){
+                    date = `${dates.getDate()}st`
+                }
+                else if(dates.getDate() == 2){
+                    date = `${dates.getDate()}nd`
+                }
+                else if(dates.getDate() == 3){
+                    date = `${dates.getDate()}rd`
+                }
+                else{
+                    date = `${dates.getDate()}th`
+                }
+
+                var year = dates.getFullYear()
+
+                var compiledDate = `<i class="far fa-clock"></i> Last updated: ${newDate} ${date}, ${year}`
+                
+                // $('#testing').html(compiledDate.toString("MMM"))
+                document.getElementById("testing").innerHTML = compiledDate
+            });
+            }
+        };
+        xhttp.open("GET", "https://api.github.com/users/aquaimpact/repos", true);
+        xhttp.send();
+    </script>
+
 </head>
 
 <body class="body-blue">
@@ -65,7 +104,7 @@
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title"><span aria-hidden="true" class="icon fas fa-rocket"></span> Deploying
                         Application</h1>
-                    <div class="meta"><i class="far fa-clock"></i> Last updated: Oct 12th, 2020</div>
+                    <div class="meta" id="testing"><i class="far fa-clock"></i> Last updated: Oct 12th, 2020</div>
                 </div>
                 <!--//doc-header-->
                 <div class="doc-body row">
